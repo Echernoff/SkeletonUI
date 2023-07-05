@@ -1,5 +1,6 @@
 import SwiftUI
 
+@available(iOS 15.0, *)
 final class SkeletonPresenter: ObservableObject {
     @Published var loading: Bool
     @Published var size: CGSize?

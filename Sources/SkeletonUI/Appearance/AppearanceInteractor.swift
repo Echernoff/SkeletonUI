@@ -7,6 +7,7 @@ public enum GradientType: Equatable {
     case radial
 }
 
+@available(iOS 15.0, *)
 public struct SkeletonColor {
     public static var primary: Color {
         #if os(iOS)
@@ -33,18 +34,20 @@ public struct SkeletonColor {
     }
 }
 
-
+@available(iOS 15.0, *)
 public enum AppearanceType: Equatable {
     case solid(color: Color = SkeletonColor.primary, background: Color = SkeletonColor.background)
     case gradient(GradientType = .linear, color: Color = SkeletonColor.primary, background: Color = SkeletonColor.background, radius: CGFloat = 1, angle: CGFloat = .zero)
 }
 
 // sourcery: AutoMockable
+@available(iOS 15.0, *)
 protocol AppearanceInteractable: AnyObject {
     var presenter: AppearancePresenter { get }
     var type: CurrentValueSubject<AppearanceType, Never> { get }
 }
 
+@available(iOS 15.0, *)
 final class AppearanceInteractor: AppearanceInteractable {
     let presenter = AppearancePresenter()
     let type: CurrentValueSubject<AppearanceType, Never>

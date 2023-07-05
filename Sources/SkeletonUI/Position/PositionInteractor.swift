@@ -2,6 +2,7 @@ import Combine
 import SwiftUI
 
 // sourcery: AutoMockable
+@available(iOS 15.0, *)
 protocol PositionInteractable: AnyObject {
     var presenter: PositionPresenter { get }
     var animation: CurrentValueSubject<Animation?, Never> { get }
@@ -9,6 +10,7 @@ protocol PositionInteractable: AnyObject {
     var range: CurrentValueSubject<ClosedRange<CGFloat>, Never> { get }
 }
 
+@available(iOS 15.0, *)
 final class PositionInteractor: PositionInteractable {
     let presenter = PositionPresenter()
     let animation: CurrentValueSubject<Animation?, Never>

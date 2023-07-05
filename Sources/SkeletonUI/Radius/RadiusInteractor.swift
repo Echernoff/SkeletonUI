@@ -2,6 +2,7 @@ import Combine
 import SwiftUI
 
 // sourcery: AutoMockable
+@available(iOS 15.0, *)
 protocol RadiusInteractable: AnyObject {
     var presenter: RadiusPresenter { get }
     var animation: CurrentValueSubject<Animation?, Never> { get }
@@ -9,6 +10,7 @@ protocol RadiusInteractable: AnyObject {
     var range: CurrentValueSubject<ClosedRange<CGFloat>, Never> { get }
 }
 
+@available(iOS 15.0, *)
 final class RadiusInteractor: RadiusInteractable {
     let presenter = RadiusPresenter()
     let animation: CurrentValueSubject<Animation?, Never>

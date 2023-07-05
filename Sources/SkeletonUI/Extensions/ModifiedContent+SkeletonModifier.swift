@@ -1,6 +1,6 @@
 import SwiftUI
 
-@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
+@available(iOS 15.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
 public extension ModifiedContent where Content: View, Modifier == SkeletonModifier {
     func animation(type: AnimationType) -> ModifiedContent<Content, SkeletonModifier> {
         modifier.skeleton.animation.type.send(type)

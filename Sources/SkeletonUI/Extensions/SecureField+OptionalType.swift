@@ -1,5 +1,6 @@
 import SwiftUI
 
+@available(iOS 15.0, *)
 public extension SecureField where Label == Text {
     init(_ titleKey: LocalizedStringKey?, text: Binding<String>, onCommit: @escaping () -> Void = {}) {
         if let titleKey = titleKey {

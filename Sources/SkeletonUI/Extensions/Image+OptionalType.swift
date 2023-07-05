@@ -1,5 +1,6 @@
 import SwiftUI
 
+@available(iOS 15.0, *)
 public extension Image {
     #if os(iOS) || os(tvOS) || os(watchOS)
         init(uiImage: UIImage?) {

@@ -2,6 +2,7 @@ import Combine
 import SwiftUI
 
 // sourcery: AutoMockable
+@available(iOS 15.0, *)
 protocol SkeletonInteractable: AnyObject {
     var presenter: SkeletonPresenter { get }
     var shape: ShapeInteractable { get }
@@ -10,6 +11,7 @@ protocol SkeletonInteractable: AnyObject {
     var animation: AnimationInteractable { get }
 }
 
+@available(iOS 15.0, *)
 final class SkeletonInteractor: SkeletonInteractable {
     let presenter: SkeletonPresenter
     let shape: ShapeInteractable

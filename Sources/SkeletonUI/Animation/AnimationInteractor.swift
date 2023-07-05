@@ -8,6 +8,7 @@ public enum AnimationType: Equatable {
 }
 
 // sourcery: AutoMockable
+@available(iOS 15.0, *)
 protocol AnimationInteractable: AnyObject {
     var position: PositionInteractable { get }
     var opacity: OpacityInteractable { get }
@@ -16,6 +17,7 @@ protocol AnimationInteractable: AnyObject {
     var type: CurrentValueSubject<AnimationType, Never> { get }
 }
 
+@available(iOS 15.0, *)
 final class AnimationInteractor: AnimationInteractable {
     let position: PositionInteractable
     let opacity: OpacityInteractable

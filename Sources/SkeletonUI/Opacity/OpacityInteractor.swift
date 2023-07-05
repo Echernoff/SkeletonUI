@@ -2,6 +2,7 @@ import Combine
 import SwiftUI
 
 // sourcery: AutoMockable
+@available(iOS 15.0, *)
 protocol OpacityInteractable: AnyObject {
     var presenter: OpacityPresenter { get }
     var animation: CurrentValueSubject<Animation?, Never> { get }
@@ -9,6 +10,7 @@ protocol OpacityInteractable: AnyObject {
     var range: CurrentValueSubject<ClosedRange<Double>, Never> { get }
 }
 
+@available(iOS 15.0, *)
 final class OpacityInteractor: OpacityInteractable {
     let presenter = OpacityPresenter()
     let animation: CurrentValueSubject<Animation?, Never>

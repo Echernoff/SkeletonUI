@@ -1,5 +1,6 @@
 import SwiftUI
 
+@available(iOS 15.0, *)
 final class AnglePresenter: ObservableObject {
     @Published var animation: Animation?
     @Published var value: Double = .zero

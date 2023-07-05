@@ -1,5 +1,6 @@
 import SwiftUI
 
+@available(iOS 15.0, *)
 public extension Toggle where Label: View {
     init(isOn: Binding<Bool>?, @ViewBuilder label: () -> Label) {
         if let isOn = isOn {
@@ -10,6 +11,7 @@ public extension Toggle where Label: View {
     }
 }
 
+@available(iOS 15.0, *)
 public extension Toggle where Label == Text {
     init(_ titleKey: LocalizedStringKey?, isOn: Binding<Bool>) {
         if let titleKey = titleKey {

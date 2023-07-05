@@ -1,5 +1,6 @@
 import SwiftUI
 
+@available(iOS 15.0, *)
 extension UnitPoint {
     static func point(with position: CGFloat, _ radius: CGFloat, _ angle: CGFloat) -> UnitPoint {
         let radians = angle * .pi / 180.0

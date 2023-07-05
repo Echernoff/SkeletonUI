@@ -1,5 +1,6 @@
 import SwiftUI
 
+@available(iOS 15.0, *)
 struct SkeletonView: View {
     private var shape: ShapePresenter
     private var angle: AnglePresenter

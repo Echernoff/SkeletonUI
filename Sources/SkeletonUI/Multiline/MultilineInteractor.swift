@@ -2,6 +2,7 @@ import Combine
 import SwiftUI
 
 // sourcery: AutoMockable
+@available(iOS 15.0, *)
 protocol MultilineInteractable: AnyObject {
     var presenter: MultilinePresenter { get }
     var line: CurrentValueSubject<Int, Never> { get }
@@ -11,6 +12,7 @@ protocol MultilineInteractable: AnyObject {
     var scales: CurrentValueSubject<[Int: CGFloat]?, Never> { get }
 }
 
+@available(iOS 15.0, *)
 final class MultilineInteractor: MultilineInteractable {
     let presenter = MultilinePresenter()
     let line: CurrentValueSubject<Int, Never>

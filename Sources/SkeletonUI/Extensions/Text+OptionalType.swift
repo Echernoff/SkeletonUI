@@ -1,5 +1,6 @@
 import SwiftUI
 
+@available(iOS 15.0, *)
 public extension Text {
     init<S>(_ content: S?) where S: OptionalType, S.Wrapped: StringProtocol {
         if let content = content?.wrapped {

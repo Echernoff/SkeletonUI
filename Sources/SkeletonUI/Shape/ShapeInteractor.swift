@@ -1,11 +1,13 @@
 import Combine
 import SwiftUI
 
+@available(iOS 15.0, *)
 public enum RoundedType: Equatable {
     case radius(CGFloat, style: RoundedCornerStyle = .continuous)
     case size(CGSize, style: RoundedCornerStyle = .continuous)
 }
 
+@available(iOS 15.0, *)
 public enum ShapeType: Equatable {
     case rounded(RoundedType)
     case rectangle
@@ -15,11 +17,13 @@ public enum ShapeType: Equatable {
 }
 
 // sourcery: AutoMockable
+@available(iOS 15.0, *)
 protocol ShapeInteractable: AnyObject {
     var presenter: ShapePresenter { get }
     var type: CurrentValueSubject<ShapeType, Never> { get }
 }
 
+@available(iOS 15.0, *)
 final class ShapeInteractor: ShapeInteractable {
     let presenter = ShapePresenter()
     let type: CurrentValueSubject<ShapeType, Never>
